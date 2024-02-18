@@ -16,35 +16,149 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background);
-    color: var(--secondary)
+    color: #fff;
 }
 
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 50px;
-
+    align-items: center;
+    padding: 1.4rem 5%;
+    background-color: rgba(20, 20, 70, 0.5);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
 }
 
-.logo {
-    width: 200px;
+.navbar .navbar-logo {
+    width: 240px;
 }
 
-.navbar ul li {
+.navbar .navbar-item a {
+    margin: 0 0.8rem;
     display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
     color: #fff;
 }
 
-.hero {
+.navbar .navbar-item a:hover {
+    color: rgb(0, 0, 255);
+}
+
+.navbar .navbar-item a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid rgb(0, 0, 255);
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-item a:hover::after {
+    transform: scaleX(0.9);
+}
+
+#menu-icon {
+    color: #fff;
+    display: none;
+}
+
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* TODO::Fix this */
+    background-image: url('../images/gunawan_backgorund_landing.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* TODO::Check Again */
+.landing-page::after {
+    content: '';
+    display: block;
+    position: absolute;
     width: 100%;
-    height: 90vh;
-    /* background-color: blue; */
+    height: 30%;
+    background: linear-gradient(0deg, rgba(1,1,3,1), 8%, rgba(255, 255, 255, 0), 55%);
+}
+
+.landing-page .content {
+    padding: 1.7rem 7%;
+    max-width: 60%;
+}
+
+.landing-page .content h1 {
+    font-size: 5em;
+    color: #fff;
+}
+
+.landing-page .content p {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    font-weight: 100;
+}
+/* Breakpoints */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+    /* TODO::Also need to resize the logo */
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+   /* TODO::Also need to resize the logo */
+
+    .navbar .navbar-item {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbar .navbar-item.active {
+        right: 0;
+    }
+
+    .navbar .navbar-item a {
+        color: var(--primary);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.7rem;
+    }
+
+    .navbar .navbar-item a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-item a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    #menu-icon {
+        display: inline-block;
+    }
+}
+
+/* Mobile */
+@media(max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    /* TODO::Also need to resize the logo */
 }
