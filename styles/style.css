@@ -105,120 +105,96 @@ body {
     font-weight: 100;
 }
 
-.about {
-    margin: 5rem;
+.container {
+    background-color: midnightblue;
+    margin: 0 10%;
 }
 
-.row {
-    padding: 2rem;
-    display: flex;
-    gap: 6rem;
-}
-
-.col-about-1 {
-    /* background-color: midnightblue; */
-    flex-basis: 35%;
-}
-.col-about-1 img {
-    border-radius: 50px;
-}
-
-.col-about-2 {
-    flex-basis: 65%;
-    /* background-color: midnightblue; */
-}
-
-.subtitle {
-    font-size: 4rem;
-    font-weight: 700;
+.container .section-title {
     text-align: center;
+    font-size: 4rem;
 }
 
-.col-about-2 .about-desc p {
-    margin-top: 1rem ;
+.container .row {
+    display: flex;
+    gap: 4rem;
+    padding: 4rem;
+    padding-top: 0;   
 }
 
-.tab-titles {
-    margin-top: 1rem;
+/* ------------------------------------------ */
+
+.container .row .col-1 {
+    flex-basis: 40%;
+
+    /* !Just For Debugging */
+    min-height: 40rem;
+    background-color: blue;
 }
 
-.tab-link {
-    font-size: 1.4rem;
-    font-weight: 500;
-    cursor: pointer;
+.container .row .col-2 {
+    flex-basis: 60%;
+    
+    /* !Just For Debugging */
+    background-color: blueviolet;
+}
+
+.container .row .col-2 .about-desc {
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.container .row .col-2 .about-tab-titles {
+    padding: 0 1.5rem 0.1rem 1.5rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.container .row .col-2 .about-tab-titles .tab-link {
+    font-size: 1.5rem;
+    margin-right: 2rem;
     display: inline-block;
-    margin-right: 1.2rem;
+    
+    cursor: pointer;
     position: relative;
 }
 
-.tab-link::after {  
+.container .row .col-2 .about-tab-titles .tab-link::after {
     content: '';
     width: 0;
     height: 3px;
     left: 0;
-    bottom: -8px;
-    background: blue;
+    bottom: -0.2rem;
     position: absolute;
     transition: 0.5s;
+    /* TODO::Consider */
+    background-color: blue; 
 }
 
-.tab-link.active-link::after {
+.container .row .col-2 .about-tab-titles .tab-link.active-link::after {
     width: 50%;
 }
 
-.tab-contents {
-    margin-top: 1.5rem;
-    padding-left: 0.6rem;
-    display: none;
+
+.container .row .col-2 .about-tab-content {
+    padding-left: 2rem;
 }
 
-.tab-contents h4 {
+.container .row .col-2 .about-tab-content .tab-item {
+    width: 90%;
+}
+
+.container .row .col-2 .about-tab-content .tab-item h4 {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
 }
 
-.tab-contents.active-tab {
-    display: block;
-}
-
-.tab-item {
-    margin-top: 0.5rem;
-    width: 70%;
-    /* background-color: #E1E2EF; */
-}
-
-.tab-item h4 {
-    margin-bottom: 0.3rem;
-    color: blue;
-}
-
-.tab-item p {
-    font-weight: 100;
-}
-
-.container {
-    padding: 10px 10%;
-}
-
-#projects {
-    padding: 4rem 0;
-}
-
-.project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.project-list .project-card {
-    background-color: #05204A;
-    padding: 3rem;
-    font-size: 0.8rem;
+.container .row .col-2 .about-tab-content .tab-item p {
     font-weight: 300;
-    border-radius: 15px;
 }
 /* Breakpoints */
+
 
 /* Laptop */
 @media(max-width: 1366px) {
