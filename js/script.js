@@ -22,7 +22,7 @@ function opentab(tabName, event) {
     
     // Assuming tabLinks and tabContents are properly defined elsewhere
     let tabLinks = document.querySelectorAll('.tab-link');
-    let tabContents = document.querySelectorAll('.tab-contents');
+    let tabContents = document.querySelectorAll('.about-tab-content');
 
     // Remove 'active-link' class from all tab links
     tabLinks.forEach(tabLink => tabLink.classList.remove("active-link"));
