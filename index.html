@@ -22,13 +22,13 @@
 
       <div class="navbar-item">
         <a href="#home">Home</a>
-        <a href="#">About</a>
+        <a href="#about">About</a>
         <!-- Biodata -->
         <!-- TODO::Maybe if we use laravel -->
         <!-- <a href="#">Blog</a>   -->
-        <a href="#">Portofolio</a>
+        <a href="#projects">Portofolio</a>
         <!-- Projects, Experiences, Awards, Certification  -->
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <a id="menu-icon" class="navbar-extra" href="#"
@@ -45,158 +45,163 @@
     </section>
     <!-- Hero End -->
 
+    <!-- About Section Start -->
     <section class="about" id="about">
-      <!-- TODO::Need to fix the margin and the padding -->
-      <h2 class="subtitle">About Me</h2>
-      <div class="row">
-        <div class="col-about-1">
-          <img src="images/user.png" alt="user" />
-        </div>
-        <div class="col-about-2">
-          <p class="about-desc">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            autem reiciendis fugit neque atque tempora, a nihil ducimus, itaque
-            ad inventore soluta molestiae! Fuga deserunt modi nihil soluta totam
-            repellendus, vero possimus facilis sed doloribus voluptatibus, ex
-            nesciunt magnam rem architecto necessitatibus explicabo, animi
-            impedit quas sint! Ea, fugiat in.
-          </p>
-
-          <div class="tab-titles">
-            <!-- We can change it as a -->
-            <h3
-              class="tab-link active-link"
-              onclick="opentab('Educations', event)"
-            >
-              Educations
-            </h3>
-            <h3 class="tab-link" onclick="opentab('Skills', event)">Skills</h3>
-            <h3 class="tab-link" onclick="opentab('Experiences', event)">
-              Experiences
-            </h3>
-            <h3 class="tab-link" onclick="opentab('Certifications', event)">
-              Certifications
-            </h3>
-            <h3 class="tab-link" onclick="opentab('Awards', event)">Awards</h3>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row">
+          <div class="col-1">
+            <img src="images/user.png" alt="" />
           </div>
-
-          <div class="tab-contents" id="Educations">
-            <div class="tab-item">
-              <h4>Daarul Qur'an International Senior Highschool</h4>
+          <div class="col-2">
+            <div class="about-desc">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea et
+                doloribus temporibus. Recusandae dicta ipsa cum autem dolore sed
+                aliquam exercitationem quisquam in iure tempore fugit ratione id
+                illum doloremque possimus enim sit sequi omnis, sunt
+                perspiciatis porro quos odio asperiores? Repudiandae minima
+                debitis fugiat sed ex voluptatum possimus eligendi!
               </p>
             </div>
-            <div class="tab-item">
-              <h4>Brawijaya University | Computer Engineer</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
+
+            <div class="about-tab-titles">
+              <h3
+                class="tab-link active-link"
+                onclick="opentab('education', event)"
+              >
+                Education
+              </h3>
+              <h3 class="tab-link" onclick="opentab('skill', event)">Skills</h3>
+              <h3 class="tab-link" onclick="opentab('experience', event)">
+                Experiences
+              </h3>
+              <h3 class="tab-link" onclick="opentab('certification', event)">
+                Certifications
+              </h3>
+              <h3 class="tab-link" onclick="opentab('award', event)">Awards</h3>
+            </div>
+
+            <div class="tab-content-collection">
+              <div id="education" class="about-tab-content active-tab">
+                <div class="tab-item">
+                  <h4>
+                    Daarul Qur'an International Senior High School | 2018 - 2022
+                  </h4>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum, impedit incidunt! Ratione aspernatur cum obcaecati
+                    inventore nobis cumque delectus vero blanditiis culpa
+                    soluta, nemo error ipsam dolorum, eos tempore doloribus
+                    atque distinctio accusamus molestiae?
+                  </p>
+                </div>
+
+                <div class="tab-item">
+                  <h4>Brawijaya University | Computer Engineer | 2022 - Now</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+              </div>
+              <div id="skill" class="about-tab-content">
+                <div class="tab-item">
+                  <h4>C++</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+
+                <div class="tab-item">
+                  <h4>Web Developer</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+              </div>
+              <div id="experience" class="about-tab-content">
+                <div class="tab-item">
+                  <h4>Daqupost | Vice | 2021 - 2022</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+
+                <div class="tab-item">
+                  <h4>Digital Creative | IT Development | 2023 - Now</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+              </div>
+              <div id="certification" class="about-tab-content">
+                <div class="tab-item">
+                  <h4>Dicoding Software Engineer</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+              </div>
+              <div id="award" class="about-tab-content">
+                <div class="tab-item">
+                  <h4>Lorem ipsum dolor sit amet</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+
+                <div class="tab-item">
+                  <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo sit veritatis perferendis esse animi quaerat.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="tab-contents active-tab" id="Skills">
-            <div class="tab-item">
-              <h4>C++</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-            <div class="tab-item">
-              <h4>Web Developer</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-            <div class="tab-item">
-              <h4>Video Editor</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-            <div class="tab-item">
-              <h4>Git</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-            <div class="tab-item">
-              <h4>English | Intermediate</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-          </div>
-
-          <div class="tab-contents" id="Experiences">
-            <div class="tab-item">
-              <h4>Vice of Daqupost | 2021 - 2022</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-            <div class="tab-item">
-              <h4>Digital Creative | IT Development | 2023 - Now</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                voluptates dolorem commodi repudiandae saepe nemo eum obcaecati
-                eligendi enim eos.
-              </p>
-            </div>
-          </div>
-
-          <div class="tab-contents" id="Certifications"></div>
-
-          <div class="tab-contents" id="Awards"></div>
         </div>
       </div>
     </section>
+    <!-- About Section End -->
 
     <!-- Projects Section Start -->
-    <section id="projects" class="projects">
-      <h2 class="subtitle">My Projects</h2>
+    <section class="projects" id="projects">
       <div class="container">
+        <h2 class="section-title">Projects</h2>
+
         <div class="project-list">
           <div class="project-card">
             <h3>Karem Game Engine</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              officia quia at iusto totam magnam quaerat nisi. Laboriosam, et
-              corporis.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              accusamus natus perspiciatis iste facilis ipsam necessitatibus
+              incidunt quo iure error.
             </p>
             <a href="#">Learn More</a>
           </div>
           <div class="project-card">
-            <h3>Karem Game Engine</h3>
+            <h3>This Portfolio Website</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              officia quia at iusto totam magnam quaerat nisi. Laboriosam, et
-              corporis.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              accusamus natus perspiciatis iste facilis ipsam necessitatibus
+              incidunt quo iure error.
             </p>
             <a href="#">Learn More</a>
           </div>
           <div class="project-card">
-            <h3>Karem Game Engine</h3>
+            <h3>Masjid Raden Patah's Website</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-              officia quia at iusto totam magnam quaerat nisi. Laboriosam, et
-              corporis.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              accusamus natus perspiciatis iste facilis ipsam necessitatibus
+              incidunt quo iure error.
             </p>
             <a href="#">Learn More</a>
           </div>
@@ -204,6 +209,44 @@
       </div>
     </section>
     <!-- Projects Section End -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="row">
+          <form action="get">
+            <div class="input-group">
+              <i data-feather="user"></i>
+              <input type="text" name="nama" placeholder="name">
+            </div>
+            <div class="input-group">
+              <i data-feather="at-sign"></i>
+              <input type="email" name="email" placeholder="email">
+            </div>
+            <div class="input-group textarea-input">
+              <i data-feather="edit-3"></i>
+              <textarea name="message" id="message" rows="10" placeholder="message"></textarea>
+            </div>
+            <input type="submit" class="button">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section start -->
+    <footer id="footer" class="footer">
+      <div class="socials">
+        <a href="https://www.instagram.com/guna_wan523/"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/wawan-camoh/"
+          ><i data-feather="linkedin"></i
+        ></a>
+        <a href="#"><i data-feather="mail"></i></a>
+      </div>
+      <h6>Created by <strong>Gunawan</strong>. &copy; 2024</h6>
+    </footer>
+    <!-- Footer section end -->
 
     <script>
       feather.replace();

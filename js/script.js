@@ -13,16 +13,13 @@ document.addEventListener('click', function(e){
 });
 
 // about section
-var tabLinks = document.getElementsByClassName("tab-link");
-var tabContents = document.getElementsByClassName("tab-contents");
-
 function opentab(tabName, event) {
     // Prevent default behavior of the event, if necessary
     event.preventDefault();
     
     // Assuming tabLinks and tabContents are properly defined elsewhere
     let tabLinks = document.querySelectorAll('.tab-link');
-    let tabContents = document.querySelectorAll('.tab-contents');
+    let tabContents = document.querySelectorAll('.about-tab-content');
 
     // Remove 'active-link' class from all tab links
     tabLinks.forEach(tabLink => tabLink.classList.remove("active-link"));

@@ -1,284 +1,425 @@
 :root {
-    --primary: #05204A;
-    --secondary: #E1E2EF;
-    --background: #02020A;
+  --primary: #05204a;
+  --secondary: #e1e2ef;
+  --background: #02020a;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background);
-    color: #fff;
-    height: 10000px ;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: #fff;
+  /* height: 10000px; */
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.4rem 5%;
-    background-color: rgba(20, 20, 70, 0.8);
-    border-bottom: 1px solid var(--primary);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 5%;
+  background-color: rgba(20, 20, 70, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
 }
 
 .navbar .navbar-logo {
-    width: 240px;
+  width: 240px;
 }
 
 .navbar .navbar-item a {
-    margin: 0 0.8rem;
-    display: inline-block;
-    color: #fff;
+  margin: 0 0.8rem;
+  display: inline-block;
+  color: #fff;
 }
 
 .navbar .navbar-item a:hover {
-    color: rgb(0, 0, 255);
+  color: rgb(0, 0, 255);
 }
 
 .navbar .navbar-item a::after {
-    content: '';
-    display: block;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid rgb(0, 0, 255);
-    transform: scaleX(0);
-    transform-origin: 0 0;
-    transition: 0.2s linear;
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid rgb(0, 0, 255);
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: 0.2s linear;
 }
 
 .navbar .navbar-item a:hover::after {
-    transform: scaleX(0.9);
+  transform: scaleX(0.9);
 }
 
 #menu-icon {
-    color: #fff;
-    display: none;
+  color: #fff;
+  display: none;
 }
 
 .landing-page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    /* TODO::Fix this */
-    background-image: url('../images/gunawan_backgorund_landing.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* TODO::Fix this */
+  background-image: url("../images/gunawan_backgorund_landing.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* TODO::Check Again */
 .landing-page::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    background: linear-gradient(0deg, rgba(1,1,3,1), 8%, rgba(255, 255, 255, 0), 55%);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1),
+    8%,
+    rgba(255, 255, 255, 0),
+    55%
+  );
 }
 
 .landing-page .content {
-    padding: 1.7rem 7%;
-    max-width: 60%;
+  padding: 1.7rem 7%;
+  max-width: 60%;
 }
 
 .landing-page .content h1 {
-    font-size: 5rem;
-    color: #fff;
+  font-size: 5rem;
+  color: #fff;
 }
 
 .landing-page .content p {
-    font-size: 1.5rem;
-    line-height: 1.9rem;
-    font-weight: 100;
-}
-
-.about {
-    margin: 5rem;
-}
-
-.row {
-    padding: 2rem;
-    display: flex;
-    gap: 6rem;
-}
-
-.col-about-1 {
-    /* background-color: midnightblue; */
-    flex-basis: 35%;
-}
-.col-about-1 img {
-    border-radius: 50px;
-}
-
-.col-about-2 {
-    flex-basis: 65%;
-    /* background-color: midnightblue; */
-}
-
-.subtitle {
-    font-size: 4rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.col-about-2 .about-desc p {
-    margin-top: 1rem ;
-}
-
-.tab-titles {
-    margin-top: 1rem;
-}
-
-.tab-link {
-    font-size: 1.4rem;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 1.2rem;
-    position: relative;
-}
-
-.tab-link::after {  
-    content: '';
-    width: 0;
-    height: 3px;
-    left: 0;
-    bottom: -8px;
-    background: blue;
-    position: absolute;
-    transition: 0.5s;
-}
-
-.tab-link.active-link::after {
-    width: 50%;
-}
-
-.tab-contents {
-    margin-top: 1.5rem;
-    padding-left: 0.6rem;
-    display: none;
-}
-
-.tab-contents h4 {
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
-
-.tab-item {
-    margin-top: 0.5rem;
-    width: 70%;
-    /* background-color: #E1E2EF; */
-}
-
-.tab-item h4 {
-    margin-bottom: 0.3rem;
-    color: blue;
-}
-
-.tab-item p {
-    font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: 100;
 }
 
 .container {
-    padding: 10px 10%;
+  /* !Just For Debugging */
+  /* background-color: midnightblue; */
+  padding: 0 10%;
 }
 
-#projects {
-    padding: 4rem 0;
+.container .section-title {
+  padding-top: 5rem;
+  text-align: center;
+  font-size: 4rem;
 }
+
+.container .row {
+  display: flex;
+  gap: 2rem;
+  padding-top: 0;
+}
+
+/* ------------------------------------------ */
+
+/* * General template * */
+
+/*
+.container .row .col-1 {
+  flex-basis: 45%;
+
+  !Just For Debugging 
+  min-height: 40rem; 
+  background-color: blue; 
+}
+
+ .container .row .col-2 {
+  flex-basis: 65%;
+
+  
+  !Just For Debugging 
+  background-color: blueviolet;
+} */
+
+section {
+  margin-top: 4rem;
+}
+/* * Specific to about section * */
+
+.col-1 img {
+  border-radius: 1rem;
+  width: 400px;
+}
+
+.col-2 .about-desc {
+  /* TODO::Tidy up this */
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 0;
+}
+
+.col-2 .about-tab-titles {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.col-2 .about-tab-titles .tab-link {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  display: inline-block;
+
+  cursor: pointer;
+  position: relative;
+}
+
+.col-2 .about-tab-titles .tab-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -0.2rem;
+  position: absolute;
+  transition: 0.5s;
+  /* TODO::Consider */
+  background-color: blue;
+}
+
+.col-2 .about-tab-titles .tab-link.active-link::after {
+  width: 50%;
+}
+
+.col-2 .tab-content-collection {
+  margin-left: 1rem;
+}
+
+.col-2 .tab-content-collection .about-tab-content {
+  display: none;
+}
+
+.col-2 .tab-content-collection .about-tab-content.active-tab {
+  display: block;
+}
+
+.col-2 .tab-content-collection .about-tab-content .tab-item {
+    width: 80%;
+}
+
+.col-2 .tab-content-collection .about-tab-content .tab-item h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.col-2 .tab-content-collection .about-tab-content .tab-item p {
+  font-weight: 300;
+}
+
+/* * End of Specific to about section * */
+
+/* * Start of Specific to projects section * */
 
 .project-list {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-gap: 40px; */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .project-list .project-card {
-    background-color: #05204A;
-    padding: 3rem;
-    font-size: 0.8rem;
+    background-color: rgba(1,1,255,0.2); /* !TEMPORARY */
+    width: 405px;
+    height: 250px;
+    padding: 2rem;
+    font-size: 13px;
     font-weight: 300;
-    border-radius: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 0.4s;
 }
+
+.project-list .project-card:hover {
+    background-color: blue;
+    transform: translateY(-1rem);
+}
+
+.project-list .project-card h3 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+.project-list .project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.project-list .project-card a {
+    color: white;
+}
+
+/* * End of Specific to projects section * */
+
+/* * Start of Specific to contact section * */
+
+.contact .container .row {
+  justify-content: center;
+}
+
+.input-group {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  
+  display: flex;
+  align-items: center;
+
+  background-color: #202020;
+  border: 1px solid #eee;
+}
+
+.input-group.textarea-input {
+  align-items: start;
+  padding-top: 2rem;
+}
+
+.input-group input,
+.input-group textarea {
+  color: white;
+  width: 30rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: none;
+}
+
+.input-group.textarea-input textarea {
+  padding-top: 0;
+}
+
+.button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+
+  font-size: 1.5rem;
+  color: white;
+  
+  background-color: #202020;
+  border: 1px solid white;
+}
+
+.button:hover {
+  background-color: blue;
+  border: 0;
+}
+
+/* * End of Specific to contact section * */
+
+/* * Start of Specific to footer section * */
+
+.footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  bottom: 0;
+  font-size: 2rem;
+
+  background-color: var(--primary);
+}
+
+.footer .socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer .socials a{
+  color: white;
+}
+
+.footer h6 {
+  text-align: center;
+  font-weight: 300;
+}
+
+/* * End of Specific to footer section * */
+
 /* Breakpoints */
 
 /* Laptop */
-@media(max-width: 1366px) {
-    html {
-        font-size: 75%;
-    }
-    /* TODO::Also need to resize the logo */
-    .navbar .navbar-logo {
-        width: 200px;
-    }
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  /* TODO::Also need to resize the logo */
+  .navbar .navbar-logo {
+    width: 200px;
+  }
 }
 
 /* Tablet */
-@media(max-width: 768px) {
-    html {
-        font-size: 62.5%;
-    }
-   /* TODO::Also need to resize the logo */
-   .navbar .navbar-logo {
-        width: 160px;
-    }
-    .navbar .navbar-item {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30rem;
-        height: 100vh;
-        transition: 0.3s ease-in-out;
-    }
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  /* TODO::Also need to resize the logo */
+  .navbar .navbar-logo {
+    width: 160px;
+  }
+  .navbar .navbar-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s ease-in-out;
+  }
 
-    .navbar .navbar-item.active {
-        right: 0;
-    }
+  .navbar .navbar-item.active {
+    right: 0;
+  }
 
-    .navbar .navbar-item a {
-        color: var(--primary);
-        display: block;
-        margin: 1.5rem;
-        padding: 0.5rem;
-        font-size: 1.7rem;
-    }
+  .navbar .navbar-item a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.7rem;
+  }
 
-    .navbar .navbar-item a::after {
-        transform-origin: 0 0;
-    }
+  .navbar .navbar-item a::after {
+    transform-origin: 0 0;
+  }
 
-    .navbar .navbar-item a:hover::after {
-        transform: scaleX(0.2);
-    }
+  .navbar .navbar-item a:hover::after {
+    transform: scaleX(0.2);
+  }
 
-    #menu-icon {
-        display: inline-block;
-    }
+  #menu-icon {
+    display: inline-block;
+  }
 }
 
 /* Mobile */
-@media(max-width: 450px) {
-    html {
-        font-size: 55%;
-    }
-    /* TODO::Also need to resize the logo */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  /* TODO::Also need to resize the logo */
 }
