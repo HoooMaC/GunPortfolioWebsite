@@ -22,13 +22,13 @@
 
       <div class="navbar-item">
         <a href="#home">Home</a>
-        <a href="#">About</a>
+        <a href="#about">About</a>
         <!-- Biodata -->
         <!-- TODO::Maybe if we use laravel -->
         <!-- <a href="#">Blog</a>   -->
-        <a href="#">Portofolio</a>
+        <a href="#projects">Portofolio</a>
         <!-- Projects, Experiences, Awards, Certification  -->
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <a id="menu-icon" class="navbar-extra" href="#"
@@ -44,27 +44,6 @@
       </main>
     </section>
     <!-- Hero End -->
-
-    <!-- Template Section Start -->
-    <section id="template">
-      <div class="container">
-        <h2 class="section-title">Template Me</h2>
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-2">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea et
-              doloribus temporibus. Recusandae dicta ipsa cum autem dolore sed
-              aliquam exercitationem quisquam in iure tempore fugit ratione id
-              illum doloremque possimus enim sit sequi omnis, sunt perspiciatis
-              porro quos odio asperiores? Repudiandae minima debitis fugiat sed
-              ex voluptatum possimus eligendi!
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Template Section End -->
 
     <!-- About Section Start -->
     <section class="about" id="about">
@@ -114,9 +93,7 @@
                     Laborum, impedit incidunt! Ratione aspernatur cum obcaecati
                     inventore nobis cumque delectus vero blanditiis culpa
                     soluta, nemo error ipsam dolorum, eos tempore doloribus
-                    atque distinctio accusamus molestiae? Explicabo nam officia
-                    aspernatur atque pariatur, hic laborum eveniet, molestiae
-                    sequi et vel modi odio accusantium?
+                    atque distinctio accusamus molestiae?
                   </p>
                 </div>
 
@@ -201,29 +178,75 @@
         <h2 class="section-title">Projects</h2>
 
         <div class="project-list">
-
           <div class="project-card">
             <h3>Karem Game Engine</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui accusamus natus perspiciatis iste facilis ipsam necessitatibus incidunt quo iure error.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              accusamus natus perspiciatis iste facilis ipsam necessitatibus
+              incidunt quo iure error.
+            </p>
             <a href="#">Learn More</a>
           </div>
           <div class="project-card">
             <h3>This Portfolio Website</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui accusamus natus perspiciatis iste facilis ipsam necessitatibus incidunt quo iure error.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              accusamus natus perspiciatis iste facilis ipsam necessitatibus
+              incidunt quo iure error.
+            </p>
             <a href="#">Learn More</a>
           </div>
           <div class="project-card">
             <h3>Masjid Raden Patah's Website</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui accusamus natus perspiciatis iste facilis ipsam necessitatibus incidunt quo iure error.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+              accusamus natus perspiciatis iste facilis ipsam necessitatibus
+              incidunt quo iure error.
+            </p>
             <a href="#">Learn More</a>
           </div>
-
-
         </div>
-
       </div>
     </section>
     <!-- Projects Section End -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="row">
+          <form action="get">
+            <div class="input-group">
+              <i data-feather="user"></i>
+              <input type="text" name="nama" placeholder="name">
+            </div>
+            <div class="input-group">
+              <i data-feather="at-sign"></i>
+              <input type="email" name="email" placeholder="email">
+            </div>
+            <div class="input-group textarea-input">
+              <i data-feather="edit-3"></i>
+              <textarea name="message" id="message" rows="10" placeholder="message"></textarea>
+            </div>
+            <input type="submit" class="button">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section start -->
+    <footer id="footer" class="footer">
+      <div class="socials">
+        <a href="https://www.instagram.com/guna_wan523/"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/wawan-camoh/"
+          ><i data-feather="linkedin"></i
+        ></a>
+        <a href="#"><i data-feather="mail"></i></a>
+      </div>
+      <h6>Created by <strong>Gunawan</strong>. &copy; 2024</h6>
+    </footer>
+    <!-- Footer section end -->
 
     <script>
       feather.replace();

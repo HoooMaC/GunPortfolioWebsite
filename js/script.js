@@ -13,9 +13,6 @@ document.addEventListener('click', function(e){
 });
 
 // about section
-var tabLinks = document.getElementsByClassName("tab-link");
-var tabContents = document.getElementsByClassName("tab-contents");
-
 function opentab(tabName, event) {
     // Prevent default behavior of the event, if necessary
     event.preventDefault();
