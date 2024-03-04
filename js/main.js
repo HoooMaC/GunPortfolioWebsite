@@ -5,6 +5,11 @@ import '../styles/style.css'
 
 import '../styles/utils.css'
 
+const header = document.querySelector('.header');
+document.querySelector('.menu-bar').onclick = () => {
+    header.classList.toggle('active');
+}
+
 
 const sections = document.querySelectorAll('section[id]');
 const navbarLinks = document.querySelectorAll('.navbar__menu a');
