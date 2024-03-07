@@ -1,0 +1,26 @@
+.home {
+    background-image: url('/public/images/home-background.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.home__container {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.home__img {
+    width: 30rem;
+}
+
+.home__subtitle {
+    font-size: var(--size-3xl);
+    color: var(--clr-secondary);
+    letter-spacing: 1rem;
+}

@@ -15,24 +15,6 @@
 .border-debug {
     border: 1px solid red ;
 }
-
-section {
-    min-height: 100vh;
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-    font-weight: 900;
-}
-section:nth-child(odd) {
-    margin: 0;
-    background-color: rgb(75, 75, 75);
-}
-section:nth-child(even) {
-    margin: 0;
-    background-color: rgb(25, 25, 25);
-}
 /* End of just for debugging */
 
 .btn {
@@ -66,6 +48,7 @@ section:nth-child(even) {
 }
 
 .section {
+    min-height: 100svh;
     margin-top: 5rem;
 }
 

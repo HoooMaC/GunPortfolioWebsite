@@ -24,7 +24,7 @@
     height: 100vh;
     background-color: var(--clr-navbar-background);
     border-right: 1px solid var(--clr-tertiary);
-    transition: .3s;
+    transition: .5;
 }
 
 .header.active {
@@ -92,6 +92,7 @@
 /* md */
 /* @media (min-width: 768px) {} */
 /* lg */
+
 @media (min-width: 768px) {
     .menu-bar {
         display: none;
@@ -103,7 +104,7 @@
         left: 0;
         top: 0;
         width: 100px;
-        height: 100vh;
+        height: 100svh;
         background-color: var(--clr-navbar-background);
         border-right: 1px solid var(--clr-tertiary);
     }
