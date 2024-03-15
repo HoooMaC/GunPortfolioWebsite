@@ -63,6 +63,10 @@ a {
     color: var(--clr-tertiary);
 }
 
+span {
+    color: var(--clr-primary);
+}
+
 strong {
     color: var(--clr-secondary);
 }

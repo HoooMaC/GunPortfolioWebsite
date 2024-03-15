@@ -3,6 +3,8 @@ import '../styles/modern-normalize.css'
 import '../styles/style.css'
 import '../styles/components/navbar.css'
 import '../styles/components/home.css'
+import '../styles/components/about.css'
+import '../styles/components/skills.css'
 
 import '../styles/utils.css'
 

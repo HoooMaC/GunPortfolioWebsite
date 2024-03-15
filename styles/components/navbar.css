@@ -24,11 +24,12 @@
     height: 100vh;
     background-color: var(--clr-navbar-background);
     border-right: 1px solid var(--clr-tertiary);
-    transition: .5;
+    transition: left .5;
 }
 
 .header.active {
     left: 0;
+    transition: left 0.3s;
 }
 
 .navbar__list {
@@ -99,7 +100,6 @@
     }
 
     .header {
-        display: block;
         position: fixed;    
         left: 0;
         top: 0;

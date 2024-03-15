@@ -1,0 +1,7 @@
+section#skills {
+    background-color: var(--clr-tertiary);
+}
+
+.skills .section-title {
+    color: var(--clr-primary);
+}
