@@ -17,7 +17,6 @@
 
 .header {
     position: fixed;    
-    /* !Off temporary */
     left: -100%;
     top: 0;
     width: 11rem;
@@ -27,26 +26,9 @@
     transition: left .5;
 }
 
-.header.active {
-    left: 0;
-    transition: left 0.3s;
-}
-
 .navbar__list {
     list-style: none;
 }
-
-/* .navbar__logo {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 1.8rem;
-    left: 1.8rem;
-    margin: auto;
-    text-align: center;
-    border-radius: 50%;
-    background-color: var(--clr-secondary);
-} */
 
 .navbar__menu {
     position: absolute;
@@ -105,10 +87,9 @@
         top: 0;
         width: 100px;
         height: 100svh;
-        background-color: var(--clr-navbar-background);
-        border-right: 1px solid var(--clr-tertiary);
+        transition: left .5;
     }
-    
+
     .navbar__list {
         list-style: none;
     }

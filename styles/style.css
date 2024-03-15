@@ -70,3 +70,8 @@ span {
 strong {
     color: var(--clr-secondary);
 }
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}

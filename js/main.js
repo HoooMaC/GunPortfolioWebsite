@@ -2,16 +2,13 @@ import '../styles/modern-normalize.css'
 
 import '../styles/style.css'
 import '../styles/components/navbar.css'
+import '../styles/components/mobile-nav.css'
 import '../styles/components/home.css'
 import '../styles/components/about.css'
 import '../styles/components/skills.css'
 
 import '../styles/utils.css'
 
-const header = document.querySelector('.header');
-document.querySelector('.menu-bar').onclick = () => {
-    header.classList.toggle('active');
-}
 
 
 const sections = document.querySelectorAll('section[id]');
@@ -33,3 +30,5 @@ window.onscroll = () => {
         }
     })
 }
+import mobileNav from './components/mobile-nav'
+mobileNav();
